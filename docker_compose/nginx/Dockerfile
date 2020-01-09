@@ -1,3 +1,5 @@
 FROM nginx:latest
-ADD django.conf /etc/nginx/sites-available/
-RUN ln /etc/nginx/sites-available/django.conf /etc/nginx/sites-enabled/
+
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY ./docker_compose/nginx/django.conf /etc/nginx/conf.d/
