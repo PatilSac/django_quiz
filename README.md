@@ -54,11 +54,11 @@ Web server, reverse proxy, load balancer, mail proxy and HTTP cache combination 
 ```
 TBD:
 
-  GitHub                             Nexus 
-    |                                  Λ
-    | webhook on checkin               | backup
-    |                                  |
-  Jenkins  - - - - - - - - - - - -  > Host - - - - - - - - - - > Kubernetes (configure, scale, monitor)
+  GitHub                           Nexus 
+    |                                Λ
+    | webhook on checkin             | backup
+    |                                |
+  Jenkins  - - - - - - - - - - -  > Host - - - - - - - - - - > Kubernetes (configure, scale, monitor)
               code trans                     unit/int test
 ```
 
