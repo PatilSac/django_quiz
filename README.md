@@ -51,6 +51,7 @@ Web server, reverse proxy, load balancer, mail proxy and HTTP cache combination 
 
 ### CI/CD
 
+```
 TBD:
 
   GitHub                             Nexus 
@@ -59,8 +60,7 @@ TBD:
     |                                  |
   Jenkins  - - - - - - - - - - - -  > Host - - - - - - - - - - > Kubernetes (configure, scale, monitor)
               code trans                     unit/int test
-  
-  
+```
 
 ### DO NOT READ BEYOND THIS. ITS A TEMPLATE FOR README FILE IN GITHUB.
 
