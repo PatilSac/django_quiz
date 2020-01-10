@@ -1,24 +1,38 @@
 # django_quiz
 This is a dockerized django rest framework example. Once docker-compose is UP, there will be two services running based on own dockerfiles sitting in the docker_compose directory. App code is in app folder. 
 
+## Prerequisites
 
-
-
-
-# Project Title
-
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+Ensure that you have docker, docker-compose installed
 
 ```
-Give examples
+sudo apt-get update
+sudo apt-get install docker-ce
+sudo apt-get install docker-compose
+```
+
+
+### Getting Started
+
+Want to run this on local linux? (find out windows alternatives for your windows machine)
+
+1. Ensure that you have docker, docker-compose installed
+```
+sudo apt-get update
+sudo apt-get install docker-ce
+sudo apt-get install docker-compose
+```
+2. Clone git repo
+```
+git clone https://github.com/PatilSac/django_quiz.git
+```
+3. Build the services written in docker_compose
+```
+docker-compose -f docker-compose.yml build
+```
+4. Run the services using docker_compose
+```
+docker-compose -f docker-compose.yml up
 ```
 
 ### Installing
