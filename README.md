@@ -1,5 +1,5 @@
 # django_quiz
-This is a dockerized django rest framework example. Once docker-compose is UP, there will be two services running based on own dockerfiles sitting in the docker_compose directory. App code is in app folder. 
+This is a dockerized django rest framework example. Once docker-compose is UP, there will be two services running based on own Dockerfiles sitting in the docker_compose directory. App code is in app folder. 
 
 ## Prerequisites
 
@@ -10,7 +10,6 @@ sudo apt-get update
 sudo apt-get install docker-ce
 sudo apt-get install docker-compose
 ```
-
 
 ### Getting Started
 
@@ -35,37 +34,35 @@ docker-compose -f docker-compose.yml build
 docker-compose -f docker-compose.yml up
 ```
 
-### Installing
+## Containers
 
-A step by step series of examples that tell you how to get a development env running
+There are two servers. Dockerfiles for them are located at:
+django_server : docker_compose/docker/Dockerfile
+nginx_server  : docker_compose/nginx/Dockerfile
 
-Say what the step will be
 
-```
-Give the example
-```
+### Network
 
-And repeat
+## Gunicorn
+Python Web Server Gateway Interface HTTP server, running at 0.0.0.0:8000 in the django_server container. This is something that executes Python as Python isn't the best at handling all types of requests.
 
-```
-until finished
-```
+## Nginx
+Web server, reverse proxy, load balancer, mail proxy and HTTP cache combination being used here for django rest framework. It is running at port 80 in its docker container and serving Gunicorn.
 
-End with an example of getting some data out of the system or using it for a little demo
+### CI/CD
 
-## Running the tests
+TBD:
 
-Explain how to run the automated tests for this system
+  GitHub                             Nexus 
+    |                                  Λ
+    | webhook on checkin               | backup
+    |                                  |
+  Jenkins  - - - - - - - - - - - -  > Host - - - - - - - - - - > Kubernetes (configure, scale, monitor)
+              code trans                     unit/int test
+  
+  
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
+### DO NOT READ BEYOND THIS. ITS A TEMPLATE FOR README FILE IN GITHUB.
 
 Explain what these tests test and why
 
