@@ -62,6 +62,12 @@ TBD:
               code trans                     unit/int test
 ```
 
+### In case of docker issues check user permission at the host
+
+Run these two commands and it will solve this particular problem:
+sudo usermod -a -G docker $USER # adds your current user to docker group
+newgrp docker # activates new permissions for docker group
+
 ### DO NOT READ BEYOND THIS. ITS A TEMPLATE FOR README FILE IN GITHUB.
 
 Explain what these tests test and why
